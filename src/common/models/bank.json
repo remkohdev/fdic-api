@@ -1,0 +1,48 @@
+{
+  "name": "Bank",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "county": {
+      "type": "string"
+    },
+    "cityholdingcompany": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "offices": {
+      "type": "number"
+    },
+    "assets": {
+      "type": "number"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,111 @@
+swagger: "2.0"
+info:
+  description: "FDIC Insitutions Data API."
+  version: "1.0.0"
+  title: "FDIC Insitutions Data API"
+  contact:
+    name: "remkohdev"
+    email: "remkohdev@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost"
+basePath: "/v0.1.0"
+tags:
+- name: "FDIC Institutions"
+  description: "FDIC Institutions"
+  externalDocs:
+    description: "Current list of all institutions."
+    url: "https://www5.fdic.gov/idasp/warp_download_all.asp"
+- name: "Banks"
+  description: "Banks"
+schemes:
+- "https"
+paths:
+  /banks:
+    get:
+      tags:
+      - "Banks"
+      summary: "Find banks"
+      description: "Returns a list of banks"
+      operationId: "getBanks"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "name"
+        in: "query"
+        description: "The name of the bank"
+        required: false
+        type: "string"
+      - name: "assets"
+        in: "query"
+        description: "Minimal assets of the bank"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Bank"
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "No Banks found"
+  /banks/{bankId}:
+    get:
+      tags:
+      - "Banks"
+      summary: "Find bank by ID using the FED_RSSD identifier."
+      description: "Returns a single bank"
+      operationId: "getBankById"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bankId"
+        in: "path"
+        description: "FED_RSSD identifier of bank to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Bank"
+        400:
+          description: "Bad request"
+        404:
+          description: "Bank not found"
+definitions:
+  Bank:
+    type: "object"
+    required:
+    - "name"
+    properties:
+      name:
+        type: "string"
+      address:
+        type: "string"
+      city: 
+        type: "string"
+      state: 
+        type: "string"
+      zipcode:
+        type: "string"
+      county: 
+        type: "string"
+      cityholdingcompany: 
+        type: "string"
+      url:
+        type: "string"
+      offices: 
+        type: "integer"
+      assets: 
+        type: "integer"
+      active:
+        type: "boolean"
+externalDocs:
+  description: "Find out more"
+  url: "http://medium.com/@remkohdev"
