@@ -1,5 +1,4 @@
+# FDIC-API
 
+See [medium.com/@remkohdev](https://medium.com/@remkohdev).
 
-```
-$ newman run -e 'postman/FDIC-API_LOCALHOST.postman_environment.json' -g 'postman/FDIC-API.postman_collection.json'
-```
