@@ -84,28 +84,272 @@ definitions:
     required:
     - "name"
     properties:
-      name:
-        type: "string"
-      address:
-        type: "string"
-      city: 
-        type: "string"
-      state: 
-        type: "string"
-      zipcode:
-        type: "string"
-      county: 
-        type: "string"
-      cityholdingcompany: 
-        type: "string"
-      url:
-        type: "string"
-      offices: 
-        type: "integer"
-      assets: 
-        type: "integer"
-      active:
-        type: "boolean"
+      STNAME:
+        type: string
+      CERT:
+        type: integer
+      DOCKET:
+        type: integer
+      ACTIVE:
+        type: integer
+      ADDRESS: 
+        type: string
+      ASSET: 
+        type: string
+      BKCLASS: 
+        type: string
+      CHANGEC1: 
+        type: integer
+      CHANGEC2: 
+        type: integer
+      CHANGEC3: 
+        type: integer
+      CHANGEC4: 
+        type: integer
+      CHANGEC5: 
+        type: integer
+      CHARTER: 
+        type: integer
+      CHRTAGNT: 
+        type: string
+      CONSERVE: 
+        type: string
+      CITY: 
+        type: string
+      CLCODE: 
+        type: integer
+      CMSA_NO: 
+        type: integer
+      CMSA: 
+        type: string
+      COUNTY: 
+        type: string
+      DATEUPDT: 
+        type: string
+      DENOVO: 
+        type: integer
+      DEP: 
+        type: string
+      EFFDATE: 
+        type: string
+      ENDEFYMD: 
+        type: string
+      EQ: 
+        type: string
+      ESTYMD: 
+        type: string
+      FDICDBS: 
+        type: integer
+      FDICREGN: 
+        type: string
+      FDICSUPV: 
+        type: string
+      FED: 
+        type: integer
+      FED_RSSD: 
+        type: integer
+      FEDCHRTR: 
+        type: integer
+      FLDOFF: 
+        type: string
+      IBA: 
+        type: integer
+      INACTIVE: 
+        type: integer
+      INSAGNT1: 
+        type: string
+      INSAGNT2: 
+        type: string
+      INSDATE: 
+        type: string
+      INSTCRCD: 
+        type: integer
+      INSBIF: 
+        type: integer
+      INSCOML: 
+        type: integer
+      INSDIF: 
+        type: integer
+      INSFDIC: 
+        type: integer
+      INSSAIF: 
+        type: integer
+      INSSAVE: 
+        type: integer
+      MSA_NO: 
+        type: integer
+      MSA: 
+        type: string
+      NAME: 
+        type: string
+      NEWCERT: 
+        type: integer
+      OAKAR: 
+        type: integer
+      OTSDIST: 
+        type: integer
+      OTSREGNM: 
+        type: string
+      PROCDATE: 
+        type: string
+      QBPRCOML: 
+        type: integer
+      REGAGNT: 
+        type: string
+      REPDTE: 
+        type: string
+      RISDATE: 
+        type: string
+      STCHRTR: 
+        type: integer
+      ROA: 
+        type: string
+      ROAQ: 
+        type: string
+      ROE: 
+        type: string
+      ROEQ: 
+        type: string
+      RUNDATE: 
+        type: string
+      SASSER: 
+        type: integer
+      LAW_SASSER_FLG: 
+        type: string
+      STALP: 
+        type: string
+      STCNTY:
+        type: integer
+      STNUM: 
+        type: integer
+      ZIP: 
+        type: integer
+      SUPRV_FD: 
+        type: integer
+      OCCDIST: 
+        type: integer
+      UNINUM: 
+        type: integer
+      ULTCERT: 
+        type: integer
+      CFPBEFFDTE: 
+        type: string
+      CFPBENDDTE: 
+        type: string
+      CFPBFLAG: 
+        type: integer
+      REGAGENT2: 
+        type: string
+      TE01N528: 
+        type: string
+      TE02N528: 
+        type: string
+      TE03N528: 
+        type: string
+      TE04N528: 
+        type: string
+      TE05N528: 
+        type: string
+      TE06N528: 
+        type: string
+      TE07N528: 
+        type: string
+      TE08N528: 
+        type: string
+      TE09N528: 
+        type: string
+      TE10N528: 
+        type: string
+      TE01N529: 
+        type: string
+      TE02N529: 
+        type: string
+      TE03N529: 
+        type: string
+      TE04N529: 
+        type: string
+      TE05N529: 
+        type: string
+      TE06N529: 
+        type: string
+      WEBADDR: 
+        type: string
+      OFFICES: 
+        type: integer
+      CERTCONS: 
+        type: string
+      PARCERT: 
+        type: string
+      CITYHCR: 
+        type: string
+      DEPDOM: 
+        type: string
+      FORM31: 
+        type: string
+      HCTMULT: 
+        type: string
+      INSTAG: 
+        type: string
+      MUTUAL: 
+        type: string
+      NAMEHCR: 
+        type: string
+      NETINC: 
+        type: string
+      NETINCQ: 
+        type: string
+      OFFDOM: 
+        type: string
+      OFFFOR: 
+        type: string
+      OFFOA: 
+        type: string
+      RSSDHCR: 
+        type: string
+      STALPHCR: 
+        type: string
+      STMULT: 
+        type: string
+      SUBCHAPS: 
+        type: string
+      ROAPTX: 
+        type: string
+      ROAPTXQ: 
+        type: string
+      TRUST: 
+        type: string
+      SPECGRP: 
+        type: string
+      SPECGRPN: 
+        type: string
+      TRACT: 
+        type: string
+      CSA:
+        type: string
+      CSA_NO: 
+        type: integer
+      CSA_FLG: 
+        type: integer
+      CBSA: 
+        type: string
+      CBSA_NO: 
+        type: integer
+      CBSA_METRO_NAME: 
+        type: string
+      CBSA_METRO: 
+        type: integer
+      CBSA_METRO_FLG: 
+        type: integer
+      CBSA_MICRO_FLG: 
+        type: integer
+      CBSA_DIV: 
+        type: string
+      CBSA_DIV_NO: 
+        type: integer
+      CBSA_DIV_FLG: 
+        type: integer
+      CB: 
+        type: string
 externalDocs:
   description: "Find out more"
   url: "http://medium.com/@remkohdev"
