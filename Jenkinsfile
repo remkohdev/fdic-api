@@ -14,10 +14,10 @@ node {
       env.POSTMAN_COLLECTION='postman/FDIC-API.postman_collection.json'
       env.POSTMAN_ENVIRONMENT='postman/FDIC-API_LOCALHOST.postman_environment.json'
     
-      withEnv(["PATH+NODE=${tool name: 'Node 10.13.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
+      withEnv(["PATH+NODE=${tool name: 'NodeJS 10.13.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
         sh """
           node -v
-          npm install -g newman
+          #npm install -g newman
           newman run ${env.POSTMAN_COLLECTION} -e ${env.POSTMAN_ENVIRONMENT} --timeout-request 5000
         """
       }
