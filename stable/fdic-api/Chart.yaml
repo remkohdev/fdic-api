@@ -1,0 +1,6 @@
+---
+apiVersion: v1
+appVersion: "1.0"
+description: A Helm chart to deploy FDIC-API to Kubernetes
+name: fdic-api
+version: 0.1.0

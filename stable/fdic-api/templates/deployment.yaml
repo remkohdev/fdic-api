@@ -1,0 +1,41 @@
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: fdic-api-deployment
+  namespace: remkohdev-ns
+  labels:
+    app: fdic-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fdic-api
+  template:
+    metadata:
+      labels:
+        app: fdic-api
+    spec:
+      containers:
+      - name: fdic-api
+        image: registry.ng.bluemix.net/remkohdev-ns/fdic-api:latest
+        ports:
+        - name: http
+          protocol: TCP
+          containerPort: 3000
+        env:
+        - name: COUCHDB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: couchdb-credentials
+              key: username
+        - name: COUCHDB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: couchdb-credentials
+              key: password
+        envFrom:
+        - configMapRef:
+            name: fdic-api-configmap
+      imagePullSecrets:
+      - name: bluemix-remkohdev-ns-secret

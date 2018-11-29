@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fdic-api-configmap
+  namespace: remkohdev-ns
+  labels:
+    app: fdic-api
+data:
+  NODE_ENV: development
+  COUCHDB_SERVER: couchdb-svc.remkohdev-ns
+  COUCHDB_PORT: "5984"
+  COUCHDB_PROTOCOL: http

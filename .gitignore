@@ -1,2 +1,5 @@
 .DS_Store
 src/node_modules/
+couchdb-data/*
+repo/stable/*
+*.tar.gz

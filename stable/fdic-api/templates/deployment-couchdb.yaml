@@ -1,0 +1,47 @@
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: couchdb-deployment
+  namespace: remkohdev-ns
+  labels:
+    app: couchdb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: couchdb
+  template:
+    metadata:
+      labels:
+        app: couchdb
+    spec:
+      containers:
+      - name: couchdb
+        image: apache/couchdb
+        volumeMounts:
+        - mountPath: /opt/couchdb/data
+          name: couchdb-data
+        ports:
+        - name: couchdb
+          protocol: TCP
+          containerPort: 5984
+        env:
+        - name: COUCHDB_USER
+          valueFrom:
+            secretKeyRef:
+              name: couchdb-credentials
+              key: username
+        - name: COUCHDB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: couchdb-credentials
+              key: password
+      volumes:
+      - name: couchdb-credentials-secret-volume
+        secret:
+          secretName: couchdb-credentials
+      - name: couchdb-data
+        hostPath:
+          path: /data
+          type: DirectoryOrCreate
