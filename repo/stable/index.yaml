@@ -1,32 +1,13 @@
 apiVersion: v1
 entries:
   couchdb:
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: 2018-12-03T12:38:05.169199-05:00
+  - created: 2018-12-03T12:38:05.169199-05:00
     description: A Helm chart for deploying my own CouchDB on Kubernetes
     digest: 7d8ddb725b5d65f683513b38b7f6ed769dc4f767218e09dba1e5d05baac2103e
     name: couchdb
-    urls:
-    - couchdb-0.1.0.tgz
-    version: 0.1.0
-  fdic-api:
-  - created: 2018-12-03T12:38:05.170613-05:00
-    description: FDIC-API Application.
-    digest: 183fbc6d760c4e12f86bd903895e67e2df215f01304c39476d8b96f6e32785dc
-    home: https://github.com/remkohdev/fdic-api
     keywords:
-    - fdic
-    - loopback
-    - docker
-    - api
-    maintainers:
-    - name: Remko de Knikker
-    - email: remkohdev@gmail.com
-    name: fdic-api
-    sources:
-    - https://github.com/remkohdev/fdic-api
+    - couchdb
     urls:
-    - fdic-api-0.1.0.tgz
+    - https://github.com/remkohdev/fdic-api/tree/master/repo/stable/couchdb-0.1.0.tgz
     version: 0.1.0
 generated: 2018-12-03T12:38:05.168667-05:00
