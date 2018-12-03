@@ -1,13 +1,13 @@
 apiVersion: v1
 entries:
   couchdb:
-  - created: 2018-12-03T12:38:05.169199-05:00
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-12-03T13:24:47.586285-05:00
     description: A Helm chart for deploying my own CouchDB on Kubernetes
-    digest: 7d8ddb725b5d65f683513b38b7f6ed769dc4f767218e09dba1e5d05baac2103e
+    digest: a0e6f5619bd5a344c7b9a9df6c14bd9fdf78fd451dfe2278b913df5600373809
     name: couchdb
-    keywords:
-    - couchdb
     urls:
-    - https://github.com/remkohdev/fdic-api/tree/master/repo/stable/couchdb-0.1.0.tgz
+    - couchdb-0.1.0.tgz
     version: 0.1.0
-generated: 2018-12-03T12:38:05.168667-05:00
+generated: 2018-12-03T13:24:47.584245-05:00
