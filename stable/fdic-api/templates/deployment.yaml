@@ -1,18 +1,24 @@
----
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: fdic-api-deployment
+  name: {{ template "fullname" , }}
   namespace: remkohdev-ns
   labels:
-    app: fdic-api
+    app: {{ template "name" , }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: fdic-api
   template:
     metadata:
+{{ - if .Values.podAnnotations }}
+      annotations:
+{{ toYaml .Values.podAnnotations | indent 8 }}
+{{ - end }}
       labels:
         app: fdic-api
     spec:

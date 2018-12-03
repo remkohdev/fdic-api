@@ -1,6 +1,14 @@
----
-apiVersion: v1
-appVersion: "1.0"
-description: A Helm chart to deploy FDIC-API to Kubernetes
 name: fdic-api
+description: FDIC-API Application.
 version: 0.1.0
+keywords:
+  - fdic
+  - loopback
+  - docker
+  - api
+home: https://github.com/remkohdev/fdic-api
+sources:
+  - https://github.com/remkohdev/fdic-api
+maintainers:
+  - name: Remko de Knikker
+  - email: remkohdev@gmail.com

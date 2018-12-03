@@ -1,1 +1,12 @@
----
+replicaCount: 1
+#restartPolicy: Never
+
+image:
+  repository: 
+  tag: 
+  pullPolicy: IfNotPresent
+
+service:
+  port: 3000
+
+podAnnotations: {}
