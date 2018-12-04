@@ -6,7 +6,7 @@
   "couchdb": {
     "name": "couchdb",
     "connector": "couchdb2",
-    "url": "http://couchdbadmin:couchdbadmin@192.168.1.5:5984",
+    "url": "http://couchdbadmin:couchdbadmin@couchdb-svc.remkohdev-ns:5984",
     "database": "fdic_institutions2"
   }
 }

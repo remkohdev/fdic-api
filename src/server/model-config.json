@@ -14,26 +14,26 @@
     ]
   },
   "User": {
-    "dataSource": "db",
+    "dataSource": "couchdb",
     "public": false
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "couchdb",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "couchdb",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "couchdb",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "couchdb",
     "public": false
   },
   "Bank": {
