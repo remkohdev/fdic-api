@@ -1,0 +1,9 @@
+image:
+  repository: couchdb
+  tag: latest
+  pullPolicy: IfNotPresent
+  
+service:
+  enabled: true
+  type: ClusterIP
+  externalPort: 5984

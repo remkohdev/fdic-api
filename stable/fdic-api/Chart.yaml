@@ -1,0 +1,4 @@
+apiVersion: v1
+name: fdic-api
+version: 0.1.0
+description: A Helm chart for deploying the FDIC-API application on Kubernetes

@@ -1,0 +1,21 @@
+apiVersion: v1
+entries:
+  couchdb:
+  - apiVersion: v1
+    created: 2018-12-05T11:19:36.644213-05:00
+    description: A Helm chart for deploying my own CouchDB on Kubernetes
+    digest: 79b9169a317ef7545fad885147707d47b001878ea3b9ededb2fc14b55dda40a6
+    name: couchdb
+    urls:
+    - couchdb-0.1.1.tgz
+    version: 0.1.1
+  fdic-api:
+  - apiVersion: v1
+    created: 2018-12-05T11:19:36.644559-05:00
+    description: A Helm chart for deploying the FDIC-API application on Kubernetes
+    digest: 3ab7988becccab6af504b9f40bc0005bce88b824dccf59b8a2f99f10b10be4b3
+    name: fdic-api
+    urls:
+    - fdic-api-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-12-05T11:19:36.642707-05:00

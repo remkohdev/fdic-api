@@ -1,0 +1,9 @@
+image:
+  repository: fdic-api
+  tag: latest
+  pullPolicy: IfNotPresent
+  
+service:
+  enabled: true
+  type: ClusterIP
+  externalPort: 3000
