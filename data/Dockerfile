@@ -8,4 +8,4 @@ COPY INSTITUTIONS2.json /data/INSTITUTIONS2.json
 COPY ./init-database.sh ./
 RUN chmod +x ./init-database.sh
 
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["/bin/sh", "init-database.sh"]
