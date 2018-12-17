@@ -2,7 +2,6 @@ image:
   repository: couchdb
   tag: latest
   pullPolicy: IfNotPresent
-  
 service:
   enabled: true
   type: ClusterIP
